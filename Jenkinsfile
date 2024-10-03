@@ -31,9 +31,9 @@ pipeline {
                     def dockerCmd = 'sudo docker run -itd --name My-first-containe2211 -p 8083:80 akshu20791/akshatnewimg6july:v1'
                     sshagent(['sshkeypair']) {
                         //chnage the private ip in below code
-                        // sh "docker run -itd --name My-first-containe2111 -p 8083:80 akshu20791/2febimg:v1"
-                         sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.2.113 ${dockerrm}"
-                         sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.2.113 ${dockerCmd}"
+                        // sh "docker run -itd --name My-first-containe2111 -p 8083:80 manik04/2febimg:v1"
+                         sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.39.57 ${dockerrm}"
+                         sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.39.57 ${dockerCmd}"
                     }
                 }
             }
